@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import confetti from 'canvas-confetti';
 import { Utensils, RotateCcw, ArrowRight, Wind } from 'lucide-react';
 import { audioManager } from '../utils/audioManager';
+import { BIRTHDAY_DATA } from '../data/birthdayConfig';
 
 interface StageCakeCuttingProps {
   onNext: () => void;
@@ -78,7 +79,7 @@ export const StageCakeCutting: React.FC<StageCakeCuttingProps> = ({ onNext }) =>
             ? 'Make a wish, blow out the candles, and cut your birthday slice! 🍰'
             : !isCut
             ? 'Now take the golden knife and cut your birthday slice! 🍰'
-            : 'Happy Birthday, Kuchupuchu! Enjoy your royal cake! 🍰✨'}
+            : `Happy Birthday, ${BIRTHDAY_DATA.name}! Enjoy your royal cake! 🍰✨`}
         </p>
 
         {/* Inner Pink Display Frame (Matches Screenshot Inner Rounded Box) */}
@@ -121,18 +122,18 @@ export const StageCakeCutting: React.FC<StageCakeCuttingProps> = ({ onNext }) =>
               <span className="text-base drop-shadow-xs">🍓</span>
             </div>
 
-            {/* Top Cake Tier (Pill-shaped, Soft Pink, text: KUCHUPUCHU) */}
+            {/* Top Cake Tier (Pill-shaped, Soft Pink, text: JIGU) */}
             <div className="w-44 h-14 bg-gradient-to-b from-[#FFA4C2] to-[#FF7DA6] rounded-[24px] border-2 border-white shadow-md flex items-center justify-center z-10 px-2">
               <span className="font-display text-xs sm:text-sm font-black tracking-widest text-[#5C1631]">
-                KUCHUPUCHU
+                {BIRTHDAY_DATA.name.toUpperCase()}
               </span>
             </div>
 
-            {/* Bottom Cake Tier (Larger Pill-shaped, Magenta/Rose, text: 🤍 02/10/2003 🤍) */}
+            {/* Bottom Cake Tier (Larger Pill-shaped, Magenta/Rose, text: 🤍 02/11/2005 🤍) */}
             <div className="w-56 h-16 bg-gradient-to-b from-[#FF2E79] via-[#FF4081] to-[#F50057] rounded-[24px] border-2 border-white shadow-lg flex items-center justify-center -mt-2 z-10">
               <span className="font-mono text-xs font-bold tracking-wider text-white drop-shadow-sm flex items-center gap-1.5">
                 <span>🤍</span>
-                <span>02/10/2003</span>
+                <span>{BIRTHDAY_DATA.birthDateString}</span>
                 <span>🤍</span>
               </span>
             </div>
@@ -160,10 +161,10 @@ export const StageCakeCutting: React.FC<StageCakeCuttingProps> = ({ onNext }) =>
               FIRST SLICE SERVED! 😋
             </h4>
             <p className="text-xs font-bold text-slate-700 mt-0.5">
-              First bite for Birthday Queen Kuchupuchu 👑
+              First bite for Birthday Queen {BIRTHDAY_DATA.name} 👑
             </p>
             <p className="text-[11px] font-semibold text-pink-500">
-              And a big sweet slice for the one who loves you endlessly! 💖
+              And a big sweet slice from {BIRTHDAY_DATA.giverName} who loves you endlessly! 💖
             </p>
           </div>
         )}

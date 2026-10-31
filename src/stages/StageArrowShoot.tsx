@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import confetti from 'canvas-confetti';
 import { audioManager } from '../utils/audioManager';
+import { BIRTHDAY_DATA } from '../data/birthdayConfig';
 
 interface StageArrowShootProps {
   onNext: () => void;
@@ -135,7 +136,7 @@ export const StageArrowShoot: React.FC<StageArrowShootProps> = ({ onNext }) => {
       onPointerMove={handlePointerMove}
       onPointerUp={handlePointerUp}
       onPointerCancel={handlePointerUp}
-      className="relative w-full max-w-sm mx-auto h-[590px] sm:h-[630px] rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between items-center py-7 px-6 select-none bg-gradient-to-b from-[#FFF6F4] via-[#FFEFEF] to-[#FFE2E7] touch-none"
+      className="relative w-full max-w-sm mx-auto min-h-[500px] h-[580px] sm:h-[620px] max-h-[86vh] rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between items-center py-5 sm:py-7 px-4 sm:px-6 select-none bg-gradient-to-b from-[#FFF6F4] via-[#FFEFEF] to-[#FFE2E7] touch-none"
     >
       {/* Soft Dreamy Background Aura */}
       <div className="absolute top-24 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-rose-300/30 blur-3xl pointer-events-none" />
@@ -176,7 +177,7 @@ export const StageArrowShoot: React.FC<StageArrowShootProps> = ({ onNext }) => {
               </svg>
             </div>
             <span className="text-[11px] font-bold text-rose-500/80 mt-2 bg-white/70 px-3 py-0.5 rounded-full border border-rose-200">
-              Aim for Kuchupuchu&apos;s Heart 💘
+              Aim for {BIRTHDAY_DATA.name}&apos;s Heart 💘
             </span>
           </div>
         )}
@@ -199,7 +200,7 @@ export const StageArrowShoot: React.FC<StageArrowShootProps> = ({ onNext }) => {
               >
                 ❤️
                 <span className="block text-[10px] font-bold text-rose-600 text-center -mt-1 font-sans">
-                  His Heart
+                  {BIRTHDAY_DATA.giverName} ❤️
                 </span>
               </div>
 
@@ -212,7 +213,7 @@ export const StageArrowShoot: React.FC<StageArrowShootProps> = ({ onNext }) => {
                 ✨ 💖 ✨
               </div>
 
-              {/* Right Heart (Kuchupuchu's Heart) */}
+              {/* Right Heart (Jigu's Heart) */}
               <div
                 className="absolute text-5xl transition-all duration-1000 ease-in-out filter drop-shadow-[0_0_15px_rgba(255,78,147,0.6)] animate-pulse"
                 style={{
@@ -222,7 +223,7 @@ export const StageArrowShoot: React.FC<StageArrowShootProps> = ({ onNext }) => {
               >
                 ❤️
                 <span className="block text-[10px] font-bold text-rose-600 text-center -mt-1 font-sans">
-                  Kuchupuchu
+                  {BIRTHDAY_DATA.name} ❤️
                 </span>
               </div>
             </div>
@@ -235,7 +236,7 @@ export const StageArrowShoot: React.FC<StageArrowShootProps> = ({ onNext }) => {
           </div>
         )}
 
-        {/* State 4: Grand "Happy Birthday, Kuchupuchu!" Reveal after hearts united! */}
+        {/* State 4: Grand Happy Birthday Reveal after hearts united! */}
         {loveStep === 4 && (
           <div className="w-full flex flex-col items-center text-center animate-fade-in z-20 px-2">
             {/* The United Interlocked Heart Icon */}
@@ -250,8 +251,8 @@ export const StageArrowShoot: React.FC<StageArrowShootProps> = ({ onNext }) => {
             </div>
 
             {/* The Big Birthday Wish */}
-            <h1 className="font-display text-3xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#FF2A7A] via-[#E11D48] to-[#FF4E93] tracking-tight leading-tight mb-1">
-              HAPPY BIRTHDAY, KUCHUPUCHU! 🎂❤️
+            <h1 className="font-display text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#FF2A7A] via-[#E11D48] to-[#FF4E93] tracking-tight leading-tight mb-1">
+              HAPPY BIRTHDAY, {BIRTHDAY_DATA.name.toUpperCase()}! 🎂❤️
             </h1>
 
             <div className="w-24 h-1 bg-gradient-to-r from-amber-400 via-rose-400 to-amber-300 rounded-full my-2" />

@@ -49,13 +49,13 @@ export const StagePhotoMemories: React.FC<StagePhotoMemoriesProps> = ({ onNext }
       <div className="text-center mb-4">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-semibold mb-1">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Sadaf's Spotlight Vault ✨</span>
+          <span>{BIRTHDAY_DATA.name}'s Spotlight Vault ✨</span>
         </div>
         <h2 className="font-display text-2xl sm:text-3xl font-bold text-slate-800">
-          Sadaf in the Spotlight 📸
+          {BIRTHDAY_DATA.name} in the Spotlight 📸
         </h2>
         <p className="text-xs text-slate-500 mt-1">
-          Swipe or tap Next to admire Sadaf's 3 iconic photos!
+          Swipe or tap Next to admire {BIRTHDAY_DATA.name}'s 3 iconic photos!
         </p>
       </div>
 

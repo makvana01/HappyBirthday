@@ -101,7 +101,7 @@ export function downloadAwardCertificate(
     ctx.font = '600 24px "Plus Jakarta Sans", sans-serif';
     ctx.fillText('This premier honor is officially and joyfully bestowed upon:', width / 2, 305);
 
-    // Sadaf Name in Modern Display
+    // Recipient Name in Modern Display
     ctx.fillStyle = '#BE123C';
     ctx.font = '900 84px "Outfit", "Plus Jakarta Sans", sans-serif';
     ctx.fillText(recipientName, width / 2, 395);
@@ -306,7 +306,7 @@ export function downloadMemoryCard(
 
       ctx.fillStyle = '#6B7280';
       ctx.font = '600 20px "Plus Jakarta Sans", sans-serif';
-      ctx.fillText(`SADAF · ${dateString.toUpperCase()} · BESTEST FRIEND`, width / 2, cardY + 810);
+      ctx.fillText(`${recipientName.toUpperCase()} · ${dateString.toUpperCase()} · BESTEST FRIEND`, width / 2, cardY + 810);
 
       ctx.fillStyle = '#EC4899';
       ctx.font = '28px sans-serif';

@@ -60,12 +60,12 @@ export const StageLetterEnvelope: React.FC<StageLetterEnvelopeProps> = ({ onNext
 
             {/* Heart wax seal */}
             <div className="absolute top-20 z-10 w-16 h-16 rounded-full bg-gradient-to-tr from-rose-500 to-pink-500 text-white shadow-lg flex items-center justify-center border-2 border-rose-300 animate-pulse-glow group-hover:scale-110 transition-transform">
-              <span className="font-display text-2xl font-black">S</span>
+              <span className="font-display text-2xl font-black">{BIRTHDAY_DATA.name.charAt(0)}</span>
             </div>
 
             <div className="mt-20 text-center z-10">
               <p className="font-display text-xl font-extrabold text-pink-700">
-                For Sadaf's Eyes Only 🎀
+                For {BIRTHDAY_DATA.name}'s Eyes Only 🎀
               </p>
               <span className="inline-block mt-2 text-xs font-bold text-rose-500 bg-white/90 px-3 py-1 rounded-full shadow-xs">
                 Tap to Open 💌

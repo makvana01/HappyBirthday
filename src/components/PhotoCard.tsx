@@ -57,7 +57,7 @@ export const PhotoCard: React.FC<PhotoCardProps> = ({ memory, onSelect }) => {
               {memory.title}
             </p>
             <p className="text-xs text-white/90 font-medium mt-1">
-              Add Sadaf's photo: <code className="bg-black/20 px-1.5 py-0.5 rounded text-[10px]">{memory.imagePath}</code>
+              Add {BIRTHDAY_DATA.name}'s photo: <code className="bg-black/20 px-1.5 py-0.5 rounded text-[10px]">{memory.imagePath}</code>
             </p>
             
             {/* Direct mobile upload trigger */}
@@ -66,7 +66,7 @@ export const PhotoCard: React.FC<PhotoCardProps> = ({ memory, onSelect }) => {
               className="mt-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/90 text-pink-700 text-xs font-semibold shadow-sm hover:bg-white active:scale-95 transition-all cursor-pointer"
             >
               <Upload className="w-3.5 h-3.5" />
-              <span>Choose Sadaf's Photo</span>
+              <span>Choose {BIRTHDAY_DATA.name}'s Photo</span>
               <input type="file" accept="image/*" className="hidden" onChange={handleFileUpload} />
             </label>
           </div>

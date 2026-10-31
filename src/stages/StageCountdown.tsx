@@ -79,7 +79,7 @@ export const StageCountdown: React.FC<StageCountdownProps> = ({ onUnlock }) => {
         </h1>
 
         <p className="text-xl sm:text-2xl font-extrabold text-pink-700 mb-4">
-          02 October 2003 · Queen Sadaf's Day! 👑
+          02 November 2005 · Queen {BIRTHDAY_DATA.name}'s Day! 👑
         </p>
 
         {/* The Live Countdown Timer ("Time olo ave ne ae ave") */}
@@ -128,10 +128,10 @@ export const StageCountdown: React.FC<StageCountdownProps> = ({ onUnlock }) => {
           <ArrowRight className="w-5 h-5" />
         </button>
 
-        <div className="mt-4 flex items-center justify-center gap-1 text-xs text-pink-400">
-          <Heart className="w-3.5 h-3.5 fill-pink-400" />
-          <span>Handcrafted exclusively for Sadaf</span>
-          <Heart className="w-3.5 h-3.5 fill-pink-400" />
+        <div className="mt-4 flex items-center justify-center gap-1 text-xs text-pink-500">
+          <Heart className="w-3.5 h-3.5 fill-pink-500" />
+          <span>Handcrafted exclusively for {BIRTHDAY_DATA.name} by {BIRTHDAY_DATA.giverName}</span>
+          <Heart className="w-3.5 h-3.5 fill-pink-500" />
         </div>
       </div>
     </div>

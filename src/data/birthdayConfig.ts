@@ -1,5 +1,6 @@
 // =========================================================================
-// CUSTOMIZATION AREA - ROMANTIC LOVE THEME FOR KUCHUPUCHU'S BIRTHDAY SURPRISE
+// CUSTOMIZATION AREA - ROMANTIC LOVE THEME FOR JIGU'S BIRTHDAY SURPRISE
+// GIFTED BY: DARSHAK | PASSCODE: 0208 | DOB: 02-11-2005
 // =========================================================================
 
 export interface MemoryPhoto {
@@ -32,15 +33,16 @@ export interface WheelOption {
 
 export const BIRTHDAY_DATA = {
   // 1. BASIC INFORMATION
-  name: "Kuchupuchu",
-  nickname: "Meri Kuchupuchu / My Love",
-  birthDateString: "02/10/2003", // DD/MM/YYYY
+  name: "Jigu",
+  nickname: "Meri Jigu / My Queen",
+  giverName: "Darshak",
+  birthDateString: "02/11/2005", // DD/MM/YYYY (02-11-2005)
   birthDay: 2,
-  birthMonth: 10, // October (1-indexed)
-  birthYear: 2003,
+  birthMonth: 11, // November (1-indexed)
+  birthYear: 2005,
   
   // Passcode for secret entry
-  passcode: "0209",
+  passcode: "0208",
   relationship: "THE LOVE OF MY LIFE 💍❤️",
 
   // 2. AUDIO & MUSIC CONFIGURATION
@@ -48,28 +50,28 @@ export const BIRTHDAY_DATA = {
   songTitle: "Our Love Story 🎵💖",
 
   // 3. COUNTDOWN & WELCOME COPY
-  countdownMessage: "Something truly magical is waiting for my Kuchupuchu... 💗",
-  unlockCelebrationHeadline: "IT'S YOUR DAY, KUCHUPUCHU! 💍❤️",
-  unlockCelebrationSubtext: "The universe is officially celebrating the most beautiful soul and the queen of my heart today!",
+  countdownMessage: "Something truly magical is waiting for my Jigu... 💗",
+  unlockCelebrationHeadline: "IT'S YOUR DAY, JIGU! 💍❤️",
+  unlockCelebrationSubtext: "The universe is officially celebrating the most beautiful soul and the queen of Darshak's heart today!",
 
   secretScreenHeading: "Before we begin, my love... 💌",
   secretScreenSubtext: "Only the queen of my heart has the key to unlock this romantic realm.",
-  secretScreenHint: "(your special date)",
-  welcomeTitle: "Welcome, Meri Kuchupuchu 💗",
-  welcomeSubtitle: "A world of endless love crafted just for you...",
+  secretScreenHint: "(0208)",
+  welcomeTitle: "Welcome, Meri Jigu 💗",
+  welcomeSubtitle: "A world of endless love crafted by Darshak just for you...",
 
   // 4. HEARTFELT LOVE LETTER (Line by Line reveal)
   letter: {
-    title: "A little love letter for the queen of my heart 💌",
-    salutation: "Dear Kuchupuchu,",
+    title: "A little love letter for my queen Jigu 💌",
+    salutation: "Dear Jigu,",
     paragraphs: [
       "In a world full of billions of people, my heart found its home in you. You are not just my love—you are my happiest thought, my greatest peace, and my sweetest dream come true.",
       "From your adorable smiles to the cute little ways you get angry, every single detail about you makes me fall in love with you all over again every day.",
       "Thank you for being my strength, my laughter, my safe haven, and the most precious person in my entire existence. Life with you is pure poetry.",
-      "Today is 100% all about celebrating YOU, my love. I promise to hold your hand through every storm, cherish every smile, and love you beyond forever. Happy Birthday, Meri Kuchupuchu! 💍💖"
+      "Today is 100% all about celebrating YOU, my love. I promise to hold your hand through every storm, cherish every smile, and love you beyond forever. Happy Birthday, Meri Jigu! 💍💖"
     ],
     closing: "With all my heart, soul, and endless love,",
-    signature: "Yours Forever & Always ❤️"
+    signature: "Yours Forever & Always, Darshak ❤️"
   },
 
   // 5. 3 PHOTO MEMORIES
@@ -78,8 +80,8 @@ export const BIRTHDAY_DATA = {
       id: 1,
       title: "Queen of My Heart 👑❤️",
       caption: "The moment my heart skipped a beat 💗",
-      story: "Look at how breathtakingly beautiful you are! That radiant smile of yours can light up the entire world in a heartbeat.",
-      dateTag: "Kuchupuchu Portrait 1",
+      story: "Look at how breathtakingly beautiful you are, Jigu! That radiant smile of yours can light up the entire world in a heartbeat.",
+      dateTag: "Jigu Portrait 1",
       imagePath: "/photos/photo1.jpg",
       fallbackGradient: "from-pink-400 via-rose-300 to-pink-200",
       accentEmoji: "👑"
@@ -89,7 +91,7 @@ export const BIRTHDAY_DATA = {
       title: "Pure Cuteness Overload 🎀",
       caption: "My favorite smile in the whole universe...",
       story: "100% natural, 100% adorable! This picture captures your cute, playful, and charming side that I am endlessly obsessed with.",
-      dateTag: "Kuchupuchu Portrait 2",
+      dateTag: "Jigu Portrait 2",
       imagePath: "/photos/photo2.jpg",
       fallbackGradient: "from-rose-400 via-pink-300 to-amber-200",
       accentEmoji: "💖"
@@ -98,8 +100,8 @@ export const BIRTHDAY_DATA = {
       id: 3,
       title: "My Forever Girl ✨",
       caption: "The one who stole my heart completely 💍",
-      story: "The prettiest soul I know, inside and out. Thank you for making my life so magical just by being in it, Kuchupuchu.",
-      dateTag: "Kuchupuchu Portrait 3",
+      story: "The prettiest soul I know, inside and out. Thank you for making my life so magical just by being in it, Jigu.",
+      dateTag: "Jigu Portrait 3",
       imagePath: "/photos/photo3.jpg",
       fallbackGradient: "from-fuchsia-400 via-pink-400 to-rose-200",
       accentEmoji: "✨"
@@ -121,7 +123,7 @@ export const BIRTHDAY_DATA = {
     subtitle: "5 quick questions to test our soulmate telepathy!",
     questions: [
       {
-        question: "What is my absolute favorite thing about you? 💖",
+        question: "What is Darshak's absolute favorite thing about Jigu? 💖",
         options: [
           { text: "Your warm, cute, heart-melting smile", reaction: "Yes! It brightens my darkest days! 🥺❤️", isBestieAnswer: true },
           { text: "Your innocent drama and cute giggles", reaction: "Too cute to handle honestly! 🥰" },
@@ -141,8 +143,8 @@ export const BIRTHDAY_DATA = {
       {
         question: "Who is the certified clingy baby in our relationship? 🥺",
         options: [
-          { text: "Kuchupuchu when she wants attention", reaction: "Cutest baby in the world! 🧸" },
-          { text: "Me because I can never get enough of you", reaction: "Guilty! Always obsessed with you! 🙋‍♂️❤️" },
+          { text: "Jigu when she wants attention", reaction: "Cutest baby in the world! 🧸" },
+          { text: "Darshak because he can never get enough of you", reaction: "Guilty! Always obsessed with you! 🙋‍♂️❤️" },
           { text: "Both of us clinging onto each other forever", reaction: "CORRECT! Inseparable love forever! 🔒💖", isBestieAnswer: true },
           { text: "Depends on who misses who more", reaction: "A daily love competition! 🏆" }
         ]
@@ -157,7 +159,7 @@ export const BIRTHDAY_DATA = {
         ]
       },
       {
-        question: "How much do I love you, Kuchupuchu? 🌹",
+        question: "How much does Darshak love you, Jigu? 🌹",
         options: [
           { text: "To the moon and back", reaction: "Way beyond that! 🚀" },
           { text: "More than all the stars in the universe", reaction: "Still not enough to measure it! ✨" },
@@ -173,9 +175,9 @@ export const BIRTHDAY_DATA = {
   // 8. SOULMATE HONORS CEREMONY
   award: {
     title: "THE OFFICIAL SOULMATE AWARDS 🏆",
-    recipient: "KUCHUPUCHU",
-    awardName: "QUEEN OF MY HEART & SOUL",
-    officialDate: "2 October 2026",
+    recipient: "JIGU",
+    awardName: "QUEEN OF DARSHAK'S HEART & SOUL",
+    officialDate: "2 November 2026",
     categories: [
       { icon: "👑", title: "Prettiest Smile in the Universe", desc: "Instantly brings sunshine and butterflies to my life." },
       { icon: "💖", title: "Permanent Owner of My Heart", desc: "No refunds, no returns, my heart is officially yours forever." },
@@ -190,12 +192,12 @@ export const BIRTHDAY_DATA = {
     title: "Spin Your Love Wheel 🎡",
     subtitle: "A romantic little wheel for sweet treats & love dares!",
     options: [
-      { id: "hug", label: "Tight Hug", emoji: "🫂", color: "#FF8FB8", challenge: "A warm, tight, long cuddle is officially owed right now! ❤️" },
+      { id: "hug", label: "Tight Hug", emoji: "🫂", color: "#FF8FB8", challenge: "A warm, tight, long cuddle from Darshak is officially owed right now! ❤️" },
       { id: "kiss", label: "Sweet Kiss", emoji: "💋", color: "#FFB3D9", challenge: "A sweet kiss on the forehead for my birthday queen! 👑" },
       { id: "date", label: "Dream Date", emoji: "🌹", color: "#FF65A3", challenge: "Your choice of romantic dinner date anywhere you want! 🍽️" },
-      { id: "compliment", label: "Love Note", emoji: "💌", color: "#FF9EC7", challenge: "You are the most breathtaking, kind, and precious girl in existence! ✨" },
-      { id: "promise", label: "Forever Promise", emoji: "💍", color: "#F472B6", challenge: "I promise to always hold your hand and stand by your side forever! 🔒" },
-      { id: "wish", label: "Make a Wish", emoji: "✨", color: "#EC4899", challenge: "Make a secret wish in your heart right now, and I will make it come true! 🌟" }
+      { id: "compliment", label: "Love Note", emoji: "💌", color: "#FF9EC7", challenge: "You are the most breathtaking, kind, and precious girl in existence, Jigu! ✨" },
+      { id: "promise", label: "Forever Promise", emoji: "💍", color: "#F472B6", challenge: "Darshak promises to always hold your hand and stand by your side forever! 🔒" },
+      { id: "wish", label: "Make a Wish", emoji: "✨", color: "#EC4899", challenge: "Make a secret wish in your heart right now, and Darshak will make it come true! 🌟" }
     ] as WheelOption[]
   },
 
@@ -206,14 +208,14 @@ export const BIRTHDAY_DATA = {
   },
 
   finalMessage: {
-    headline: "Happy Birthday, My Kuchupuchu! 🎂💍❤️",
+    headline: "Happy Birthday, My Jigu! 🎂💍❤️",
     paragraphs: [
       "To the girl who holds my whole world in her hands, my sweetest dream, my greatest blessing, and the love of my life...",
       "May this special year bring you boundless happiness, peace, every single dream you hold in your heart coming true, and love that never fades.",
       "You have touched my soul in ways I never knew were possible. Thank you for your warmth, your gentleness, and the pure joy you bring into my existence.",
-      "No matter what tomorrow brings, know that you are deeply, madly, and unconditionally loved by me—today, tomorrow, and across all lifetimes."
+      "No matter what tomorrow brings, know that you are deeply, madly, and unconditionally loved by Darshak—today, tomorrow, and across all lifetimes."
     ],
-    toast: "Forever yours, with all my heart... 🥂💍💖",
+    toast: "Forever yours, Darshak 🥂💍💖",
     finalButtonText: "Our Love Story Continues ❤️"
   },
 

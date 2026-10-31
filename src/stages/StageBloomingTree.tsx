@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import confetti from 'canvas-confetti';
 import { Sparkles, ArrowRight, Heart } from 'lucide-react';
 import { audioManager } from '../utils/audioManager';
+import { BIRTHDAY_DATA } from '../data/birthdayConfig';
 
 interface StageBloomingTreeProps {
   onNext: () => void;
@@ -133,7 +134,7 @@ export const StageBloomingTree: React.FC<StageBloomingTreeProps> = ({ onNext }) 
   return (
     <div
       onClick={handleTapScreen}
-      className="relative w-full max-w-sm mx-auto h-[590px] sm:h-[630px] rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between items-center py-7 px-5 select-none bg-gradient-to-b from-[#FFF6F3] via-[#FFEBE8] to-[#FFDFE5] touch-manipulation cursor-pointer"
+      className="relative w-full max-w-sm mx-auto min-h-[500px] h-[580px] sm:h-[620px] max-h-[86vh] rounded-3xl overflow-hidden shadow-2xl flex flex-col justify-between items-center py-5 sm:py-7 px-4 sm:px-5 select-none bg-gradient-to-b from-[#FFF6F3] via-[#FFEBE8] to-[#FFDFE5] touch-manipulation cursor-pointer"
     >
       {/* Background Soft Sunbeam / Aurora Glow */}
       <div className="absolute top-16 left-1/2 -translate-x-1/2 w-72 h-72 rounded-full bg-rose-300/25 blur-3xl pointer-events-none" />
@@ -144,10 +145,10 @@ export const StageBloomingTree: React.FC<StageBloomingTreeProps> = ({ onNext }) 
           it&apos;s officially your day
         </p>
         <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-[#3B1929] tracking-tight">
-          Happy Birthday, Kuchupuchu! 🌸❤️
+          Happy Birthday, {BIRTHDAY_DATA.name}! 🌸❤️
         </h2>
         <p className="font-serif italic text-xs text-rose-600/90 mt-0.5">
-          and just like that, the sweetest soul turns 21! ✨
+          and just like that, the sweetest soul turns {new Date().getFullYear() - BIRTHDAY_DATA.birthYear}! ✨
         </p>
       </div>
 

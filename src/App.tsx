@@ -43,17 +43,17 @@ export type StageId =
 const STAGES_ORDER: { id: StageId; title: string }[] = [
   { id: 'passcode', title: 'Secret Entry 🔐' },
   { id: 'countdown', title: 'Birthday Countdown ⏳' },
-  { id: 'welcome', title: 'Welcome Sadaf 💗' },
+  { id: 'welcome', title: `Welcome ${BIRTHDAY_DATA.name} 💗` },
   { id: 'envelope', title: 'Special Letter 💌' },
   { id: 'photomemories', title: 'Photo Memories 📸' },
   { id: 'memoryjourney', title: 'Memory Journey ✨' },
-  { id: 'heartgame', title: 'Bestie Challenge 🎮' },
-  { id: 'quiz', title: 'Bestie Quiz 👀' },
+  { id: 'heartgame', title: 'Heart Challenge 🎮' },
+  { id: 'quiz', title: 'Soulmate Quiz 👀' },
   { id: 'arrowshoot', title: 'Birthday Arrow 🏹' },
   { id: 'bloomingtree', title: 'Blooming Heart 🌸❤️' },
   { id: 'cakecutting', title: 'Royal Cake Cutting 🎂' },
   { id: 'award', title: 'Awards Ceremony 🏆' },
-  { id: 'wheel', title: 'Bestie Wheel 🎡' },
+  { id: 'wheel', title: 'Love Wheel 🎡' },
   { id: 'surprisebox', title: 'Mystery Surprise 🎁' },
   { id: 'finalmessage', title: 'Birthday Message 🎂' },
   { id: 'gallery', title: 'Memory Gallery 📸' },
@@ -185,8 +185,8 @@ export default function App() {
       </main>
 
       {/* Discreet Footer Note */}
-      <footer className="relative z-10 py-3 text-center text-[11px] font-medium text-pink-400/80 pointer-events-none">
-        Handcrafted for {BIRTHDAY_DATA.name} · Happy Birthday 2026 💗
+      <footer className="relative z-10 py-3 text-center text-[11px] font-medium text-pink-400/80 pointer-events-none px-2">
+        Handcrafted with endless love for {BIRTHDAY_DATA.name} by {BIRTHDAY_DATA.giverName} · Happy Birthday 💗
       </footer>
     </div>
   );

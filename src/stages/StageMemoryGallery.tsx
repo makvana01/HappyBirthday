@@ -44,10 +44,10 @@ export const StageMemoryGallery: React.FC<StageMemoryGalleryProps> = ({ onReplay
       <div className="text-center mb-6">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-pink-100 text-pink-700 text-xs font-semibold mb-1">
           <Sparkles className="w-3.5 h-3.5" />
-          <span>Sadaf's Birthday Portrait Archive</span>
+          <span>{BIRTHDAY_DATA.name}'s Birthday Portrait Archive</span>
         </div>
         <h2 className="font-display text-3xl font-extrabold text-slate-800">
-          SADAF'S BIRTHDAY GALLERY 📸
+          {BIRTHDAY_DATA.name.toUpperCase()}'S BIRTHDAY GALLERY 📸
         </h2>
         <p className="text-xs text-slate-500 mt-1 max-w-xs mx-auto">
           3 iconic pictures celebrating our favorite girl on her special day.
@@ -149,7 +149,7 @@ export const StageMemoryGallery: React.FC<StageMemoryGalleryProps> = ({ onReplay
         </button>
         <p className="text-xs text-pink-500 mt-2 flex items-center justify-center gap-1">
           <Heart className="w-3 h-3 fill-pink-500" />
-          <span>Dedicated to Sadaf with endless love</span>
+          <span>Dedicated to {BIRTHDAY_DATA.name} with endless love from {BIRTHDAY_DATA.giverName}</span>
           <Heart className="w-3 h-3 fill-pink-500" />
         </p>
       </div>

@@ -20,7 +20,7 @@ export const StagePasscode: React.FC<StagePasscodeProps> = ({ onSuccess }) => {
   const verifyCode = (inputToTest: string) => {
     const rawNormalized = normalize(inputToTest);
     const targetNormalized = normalize(BIRTHDAY_DATA.passcode);
-    const altTarget = '209';
+    const altTarget = '208';
 
     if (rawNormalized === targetNormalized || rawNormalized === altTarget) {
       setErrorMessage('');
@@ -100,7 +100,7 @@ export const StagePasscode: React.FC<StagePasscodeProps> = ({ onSuccess }) => {
           Hint: {BIRTHDAY_DATA.secretScreenHint}
         </div>
 
-        {/* Display 4 dots for 0209 passcode */}
+        {/* Display 4 dots for passcode entry */}
         <div className="flex justify-center items-center gap-3 mb-5 h-10">
           {Array.from({ length: 4 }).map((_, i) => (
             <div
@@ -126,7 +126,7 @@ export const StagePasscode: React.FC<StagePasscodeProps> = ({ onSuccess }) => {
           <input
             type="text"
             inputMode="numeric"
-            placeholder="0209"
+            placeholder={BIRTHDAY_DATA.passcode}
             value={code}
             onChange={(e) => {
               setCode(e.target.value);
@@ -186,9 +186,9 @@ export const StagePasscode: React.FC<StagePasscodeProps> = ({ onSuccess }) => {
           {isUnlocked ? 'Magic Unlocked! ✨' : 'Unlock Birthday Surprise 🔐'}
         </button>
 
-        <p className="mt-3 text-[11px] text-pink-400 flex items-center justify-center gap-1 font-medium">
-          <Heart className="w-3 h-3 fill-pink-400" />
-          <span>Made with love for Sadaf</span>
+        <p className="mt-3 text-[11px] text-pink-500 flex items-center justify-center gap-1 font-medium">
+          <Heart className="w-3 h-3 fill-pink-500" />
+          <span>Made with endless love for {BIRTHDAY_DATA.name} by {BIRTHDAY_DATA.giverName}</span>
         </p>
       </div>
 
