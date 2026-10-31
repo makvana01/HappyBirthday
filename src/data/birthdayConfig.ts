@@ -56,7 +56,7 @@ export const BIRTHDAY_DATA = {
 
   secretScreenHeading: "Before we begin, my love... 💌",
   secretScreenSubtext: "Only the queen of my heart has the key to unlock this romantic realm.",
-  secretScreenHint: "(0208)",
+  secretScreenHint: "",
   welcomeTitle: "Welcome, Meri Jigu 💗",
   welcomeSubtitle: "A world of endless love crafted by Darshak just for you...",
 

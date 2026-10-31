@@ -91,14 +91,9 @@ export const StagePasscode: React.FC<StagePasscodeProps> = ({ onSuccess }) => {
         <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-slate-800 mb-1 tracking-tight">
           {BIRTHDAY_DATA.secretScreenHeading}
         </h2>
-        <p className="text-base sm:text-lg font-bold text-pink-600 mb-1">
+        <p className="text-base sm:text-lg font-bold text-pink-600 mb-4">
           {BIRTHDAY_DATA.secretScreenSubtext}
         </p>
-        
-        {/* Hint displaying: (your born day) */}
-        <div className="inline-block px-3 py-1 rounded-full bg-pink-100/80 border border-pink-200 text-xs font-semibold text-pink-700 mb-5">
-          Hint: {BIRTHDAY_DATA.secretScreenHint}
-        </div>
 
         {/* Display 4 dots for passcode entry */}
         <div className="flex justify-center items-center gap-3 mb-5 h-10">
@@ -124,9 +119,9 @@ export const StagePasscode: React.FC<StagePasscodeProps> = ({ onSuccess }) => {
         {/* Input field (keyboard accessible) */}
         <form onSubmit={handleInputSubmit} className="mb-4">
           <input
-            type="text"
+            type="password"
             inputMode="numeric"
-            placeholder={BIRTHDAY_DATA.passcode}
+            placeholder="••••"
             value={code}
             onChange={(e) => {
               setCode(e.target.value);
@@ -137,6 +132,7 @@ export const StagePasscode: React.FC<StagePasscodeProps> = ({ onSuccess }) => {
             }}
             className="w-full text-center text-xl font-mono font-bold tracking-widest py-2.5 px-4 rounded-xl bg-white/90 border border-pink-200 text-pink-700 placeholder:text-pink-300 focus:outline-none focus:ring-2 focus:ring-pink-400 shadow-inner"
             maxLength={4}
+            autoComplete="off"
           />
         </form>
 
