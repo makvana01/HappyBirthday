@@ -1,0 +1,6 @@
+{
+  "name": "Sadaf's Birthday Surprise | Best Friend Edition",
+  "description": "An interactive, emotional, and dreamy birthday journey created especially for Sadaf by her best friend.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
