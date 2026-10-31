@@ -50,7 +50,7 @@ export const StageMemoryGallery: React.FC<StageMemoryGalleryProps> = ({ onReplay
           {BIRTHDAY_DATA.name.toUpperCase()}'S BIRTHDAY GALLERY 📸
         </h2>
         <p className="text-xs text-slate-500 mt-1 max-w-xs mx-auto">
-          3 iconic pictures celebrating our favorite girl on her special day.
+          {photos.length} iconic pictures celebrating our favorite girl on her special day.
         </p>
       </div>
 

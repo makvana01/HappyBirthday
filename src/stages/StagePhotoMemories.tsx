@@ -55,7 +55,7 @@ export const StagePhotoMemories: React.FC<StagePhotoMemoriesProps> = ({ onNext }
           {BIRTHDAY_DATA.name} in the Spotlight 📸
         </h2>
         <p className="text-xs text-slate-500 mt-1">
-          Swipe or tap Next to admire {BIRTHDAY_DATA.name}'s 3 iconic photos!
+          Swipe or tap Next to admire {BIRTHDAY_DATA.name}'s {photos.length} iconic photos!
         </p>
       </div>
 

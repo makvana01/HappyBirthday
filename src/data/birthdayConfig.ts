@@ -74,37 +74,47 @@ export const BIRTHDAY_DATA = {
     signature: "Yours Forever & Always, Darshak ❤️"
   },
 
-  // 5. 3 PHOTO MEMORIES
+  // 5. 4 PHOTO MEMORIES
   photos: [
     {
       id: 1,
-      title: "Queen of My Heart 👑❤️",
-      caption: "The moment my heart skipped a beat 💗",
-      story: "Look at how breathtakingly beautiful you are, Jigu! That radiant smile of yours can light up the entire world in a heartbeat.",
-      dateTag: "Jigu Portrait 1",
+      title: "Walking Hand in Hand 👫💖",
+      caption: "Together is my favorite place to be...",
+      story: "Walking beside you, laughing with you, and matching every step. Every journey in life feels so beautiful when your hand is in mine.",
+      dateTag: "Our Sweet Walk",
       imagePath: "/photos/photo1.jpg",
       fallbackGradient: "from-pink-400 via-rose-300 to-pink-200",
-      accentEmoji: "👑"
+      accentEmoji: "👫"
     },
     {
       id: 2,
-      title: "Pure Cuteness Overload 🎀",
-      caption: "My favorite smile in the whole universe...",
-      story: "100% natural, 100% adorable! This picture captures your cute, playful, and charming side that I am endlessly obsessed with.",
-      dateTag: "Jigu Portrait 2",
+      title: "My Safe Haven & Warmest Hug 🏡❤️",
+      caption: "Leaning on my shoulder forever...",
+      story: "In your gentle embrace and quiet smiles, my heart finds its greatest peace. You are my home, my comfort, and my everything, Jigu.",
+      dateTag: "Forever Warmth",
       imagePath: "/photos/photo2.jpg",
       fallbackGradient: "from-rose-400 via-pink-300 to-amber-200",
-      accentEmoji: "💖"
+      accentEmoji: "🥰"
     },
     {
       id: 3,
-      title: "My Forever Girl ✨",
-      caption: "The one who stole my heart completely 💍",
-      story: "The prettiest soul I know, inside and out. Thank you for making my life so magical just by being in it, Jigu.",
-      dateTag: "Jigu Portrait 3",
+      title: "Pure Love & Butterflies 🦋💍",
+      caption: "The cutest selfie of my two favorite people ✨",
+      story: "Look at that mischievous, adorable look! That playful sparkle in your eyes makes me fall head over heels in love every single day.",
+      dateTag: "Endless Smiles",
       imagePath: "/photos/photo3.jpg",
       fallbackGradient: "from-fuchsia-400 via-pink-400 to-rose-200",
       accentEmoji: "✨"
+    },
+    {
+      id: 4,
+      title: "The Birthday Queen 👑💖",
+      caption: "The most gorgeous soul in the universe...",
+      story: "Graceful, stunning, and radiant inside and out. Today and always, the spotlight belongs only to you, my beautiful Jigu!",
+      dateTag: "Queen Jigu",
+      imagePath: "/photos/photo4.jpg",
+      fallbackGradient: "from-amber-400 via-pink-400 to-rose-300",
+      accentEmoji: "👑"
     }
   ] as MemoryPhoto[],
 
