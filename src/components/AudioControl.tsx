@@ -54,8 +54,11 @@ export const AudioControl: React.FC = () => {
       </button>
 
       {/* Track Label on Desktop */}
-      <span className="hidden sm:inline-block pr-2 text-xs font-medium text-pink-700 dark:text-pink-300 max-w-[120px] truncate">
-        {status.isPlaying ? (status.isProcedural ? 'Music Box 🎀' : 'Friendship Song') : 'Melody Paused'}
+      <span 
+        title={status.isPlaying ? (status.isProcedural ? 'Music Box 🎀' : BIRTHDAY_DATA.songTitle) : 'Melody Paused'} 
+        className="hidden sm:inline-block pr-2 text-xs font-medium text-pink-700 dark:text-pink-300 max-w-[150px] truncate"
+      >
+        {status.isPlaying ? (status.isProcedural ? 'Music Box 🎀' : BIRTHDAY_DATA.songTitle) : 'Melody Paused'}
       </span>
     </div>
   );

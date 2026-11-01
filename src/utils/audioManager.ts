@@ -10,6 +10,8 @@ class AudioManager {
   private proceduralInterval: number | null = null;
   private usingProcedural: boolean = false;
   private listeners: Set<() => void> = new Set();
+  private romanticVolume: number = 0.25; // Gentle, romantic slow volume
+  private fadeInterval: number | null = null;
 
   private constructor() {
     // Lazy initialized on first user interaction
@@ -45,19 +47,54 @@ class AudioManager {
     return this.audioCtx;
   }
 
+  private fadeVolumeTo(targetVolume: number, durationMs: number = 2500): void {
+    if (!this.bgAudio) return;
+    if (this.fadeInterval) {
+      window.clearInterval(this.fadeInterval);
+      this.fadeInterval = null;
+    }
+
+    const startVolume = this.bgAudio.volume;
+    const stepTime = 50;
+    const steps = Math.max(1, durationMs / stepTime);
+    const volumeStep = (targetVolume - startVolume) / steps;
+    let currentStep = 0;
+
+    this.fadeInterval = window.setInterval(() => {
+      if (!this.bgAudio || this.bgAudio.paused) {
+        if (this.fadeInterval) window.clearInterval(this.fadeInterval);
+        this.fadeInterval = null;
+        return;
+      }
+      currentStep++;
+      const nextVol = Math.min(1, Math.max(0, startVolume + volumeStep * currentStep));
+      this.bgAudio.volume = Number(nextVol.toFixed(3));
+
+      if (currentStep >= steps) {
+        if (this.bgAudio) this.bgAudio.volume = targetVolume;
+        if (this.fadeInterval) window.clearInterval(this.fadeInterval);
+        this.fadeInterval = null;
+      }
+    }, stepTime);
+  }
+
   public async startMusic(musicPath: string = '/music/birthday-song.mp3'): Promise<void> {
-    if (this.isMusicPlaying) return;
+    if (this.isMusicPlaying && this.bgAudio && !this.bgAudio.paused) return;
 
     try {
       if (!this.bgAudio) {
         this.bgAudio = new Audio(musicPath);
         this.bgAudio.loop = true;
-        this.bgAudio.volume = 0.55;
+      } else if (musicPath && !this.bgAudio.src.endsWith(encodeURI(musicPath)) && !this.bgAudio.src.endsWith(musicPath)) {
+        this.bgAudio.src = musicPath;
       }
 
+      // Start very soft and gently fade in to romantic volume (0.25)
+      this.bgAudio.volume = 0.05;
       await this.bgAudio.play();
       this.isMusicPlaying = true;
       this.usingProcedural = false;
+      this.fadeVolumeTo(this.romanticVolume, 2500);
       this.notify();
     } catch {
       // Custom file not found or autoplay error -> start dreamy procedural music box!
@@ -74,6 +111,10 @@ class AudioManager {
   }
 
   public pauseMusic(): void {
+    if (this.fadeInterval) {
+      window.clearInterval(this.fadeInterval);
+      this.fadeInterval = null;
+    }
     if (this.bgAudio) {
       this.bgAudio.pause();
     }
@@ -93,11 +134,20 @@ class AudioManager {
     this.notify();
   }
 
+  public setVolume(volume: number): void {
+    this.romanticVolume = Math.min(1, Math.max(0, volume));
+    if (this.bgAudio) {
+      this.bgAudio.volume = this.romanticVolume;
+    }
+    this.notify();
+  }
+
   public getStatus() {
     return {
       isPlaying: this.isMusicPlaying,
       isMuted: this.isMuted,
-      isProcedural: this.usingProcedural
+      isProcedural: this.usingProcedural,
+      volume: this.romanticVolume
     };
   }
 
