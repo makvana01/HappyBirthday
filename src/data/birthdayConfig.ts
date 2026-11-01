@@ -47,7 +47,7 @@ export const BIRTHDAY_DATA = {
 
   // 2. AUDIO & MUSIC CONFIGURATION
   musicPath: "/music/birthday-song.mp3",
-  songTitle: "Our Love Story 🎵💖",
+  songTitle: "Dooron Dooron 🎵❤️",
 
   // 3. COUNTDOWN & WELCOME COPY
   countdownMessage: "Something truly magical is waiting for my Jigu... 💗",
